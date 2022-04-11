@@ -1,0 +1,16 @@
+[
+    {
+        "id1": "home",
+        "alt1": "Home-icon",
+        "route1": "./material/home.svg",
+        "width1": "50px",
+        "heigh1": "50px"
+    },
+    {
+        "id1": "proyects",
+        "alt1": "proyects-icon",
+        "route1": "./material/proyects.svg",
+        "width1": "50px",
+        "heigh1": "50px"
+    }
+]
