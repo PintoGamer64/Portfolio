@@ -7,6 +7,7 @@ class App extends Component {
   state = {
 
     color: '#fff',
+    lenguage: true
 
   }
 
@@ -19,6 +20,12 @@ class App extends Component {
       console.log(x)
       this.setState({ color: '#fff' })
     }
+
+  }
+
+  lenguageAouth = () => {
+
+
 
   }
 

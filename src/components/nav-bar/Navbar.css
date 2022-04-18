@@ -1,6 +1,46 @@
-.navbar-JP{
+#navbar-JP01{
 
-    width: 50%;
+    display: grid;
+    grid-template-areas: "navbar-01 navbar-02 navbar-03";
+    width: 100%;
+
+}
+
+.navbar-JP{
+    margin: 0;
+    width: 100%;
+    height: 10%;
     position: relative;
 
+}
+.navbar-01{
+    grid-area: navbar-01;
+}
+
+.navbar-02{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    grid-area: navbar-02;
+}
+#navbar-02-1{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#navbar-02-1 li{
+    margin: 10px;
+}
+
+.navbar-03{
+    grid-area: navbar-03;
+}
+
+.navbar-01, .navbar-02, .navbar-03{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    width: 33%;
+    height: 12%;
 }

@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 //imports
 
 //css's
-import './Navbar.css';
+import './navbar.css';
 
 //img's
 import route1 from './material/home.png';
@@ -14,24 +14,30 @@ import route4 from './material/mail.png';
 import route5 from './material/skills.png';
 import route6 from './material/dark_mode.png';
 import route7 from './material/light_mode.png';
-import route8 from './material/lenguage-spain.png';
-//import route9 from './material/lenguage-english.png';
+import route8 from './material/logo.png';
 
 //data's
-
 
 //functions & methods
 
 //Component
 class Navbar extends Component {
 
-    themeIcon;
+    //
+    /* ----- Const's -----*/
+    //
 
+    themeIcon;
+    logoIcon = route8;
+
+    //
+    /* ----- States -----*/
+    //
     state = {
 
         backgroundT: false,
 
-        lenguaje: true
+        lenguage: true
 
     }
 
@@ -41,7 +47,10 @@ class Navbar extends Component {
 
     }
 
-    ColorTheme(){
+    //
+    /* ----- Methods -----*/
+    //
+    ColorTheme() {
 
         this.setState({ backgroundT: !this.state.backgroundT });
 
@@ -49,13 +58,26 @@ class Navbar extends Component {
 
     }
 
-    themebody(){
+    LenguageTheme() {
+
+        this.setState({ lenguage: !this.state.lenguage });
+
+        console.log(`lenguaje navbar - ${this.state.lenguage}`)
+
+    }
+
+    themebody() {
 
         this.props.fun(this.state.backgroundT)
 
     }
 
+    //
+    /* ----- Component Render -----*/
+    //
     render() {
+
+        console.log('render')
 
         if (this.state.backgroundT === false) {
             this.Schema.schema = '#fff'
@@ -65,18 +87,16 @@ class Navbar extends Component {
             this.themeIcon = route7;
         }
 
-
-
         return (
             <nav className='navbar-JP' style={{ background: this.Schema.schema }}>
                 <div id='navbar-JP01'>
                     <div className='navbar-01'>
-                        <button width={50} height={50}>
-                            <img className='lenguaje' width={50} height={50} src={route8} alt='lenguages' />
+                        <button width={50} height={50} >
+                            <img width={50} height={50} className='lenguaje' src={this.logoIcon} alt='lenguages' />
                         </button>
                     </div>
                     <div className='navbar-02'>
-                        <ul id='navbar-02.1'>
+                        <ul id='navbar-02-1'>
                             <li>
                                 <a href='#skills'><img width={50} height={50} src={route5} alt='Skills-icon' id='skills' /></a>
                             </li>
@@ -94,10 +114,12 @@ class Navbar extends Component {
                             </li>
                         </ul>
                     </div>
-                    <div className='navbar-03' onClick={ () => { this.ColorTheme()
-                    this.themebody()
-                    this.props.fun(this.state.backgroundT) } } >
-                        <button width={50} height={50}>
+                    <div className='navbar-03' >
+                        <button width={50} height={50} onClick={() => {
+                            this.ColorTheme()
+                            this.themebody()
+                            this.props.fun(this.state.backgroundT)
+                        }}>
                             <img className='themes' width={50} height={50} src={this.themeIcon} alt='dark/light-mode' />
                         </button>
                     </div>
@@ -105,7 +127,7 @@ class Navbar extends Component {
                 <div id='navbar-JP02'>
                     <div className='navbar-05'>
                         <ul id='navbar-04.1'>
-                            <li className='navbarText-04.1'>Habilidades</li>
+                            <li className='navbarText-04.1'>habilidades</li>
                             <li className='navbarText-04.1'>Proyectos</li>
                             <li className='navbarText-04.1'>Inicio</li>
                             <li className='navbarText-04.1'>Github</li>
