@@ -26,7 +26,6 @@ class Navbar extends Component {
     //
     /* ----- Const's -----*/
     //
-
     themeIcon;
     logoIcon = route8;
 
@@ -34,42 +33,30 @@ class Navbar extends Component {
     /* ----- States -----*/
     //
     state = {
-
         backgroundT: false,
-
-        lenguage: true
-
+        menuText: 'Inicio'
     }
 
     Schema = {
-
-        schema: '#fff'
-
+        schema: '#fff',
+        subSchema: '#000',
+        text: '000',
     }
 
     //
     /* ----- Methods -----*/
     //
     ColorTheme() {
-
         this.setState({ backgroundT: !this.state.backgroundT });
-
-        console.log(`fondo navbar - ${this.state.backgroundT}`)
-
-    }
-
-    LenguageTheme() {
-
-        this.setState({ lenguage: !this.state.lenguage });
-
-        console.log(`lenguaje navbar - ${this.state.lenguage}`)
-
+        console.log(`fondo navbar - ${this.state.backgroundT}`);
     }
 
     themebody() {
+        this.props.fun(this.state.backgroundT);
+    }
 
-        this.props.fun(this.state.backgroundT)
-
+    selectMenu(type) {
+        this.setState({ menuText: type });
     }
 
     //
@@ -77,61 +64,72 @@ class Navbar extends Component {
     //
     render() {
 
-        console.log('render')
+        console.log('render - navbar');
 
         if (this.state.backgroundT === false) {
-            this.Schema.schema = '#fff'
+            this.Schema.schema = '#fff';
+            this.Schema.text = '#000';
+            this.Schema.subSchema = '#000';
             this.themeIcon = route6;
         } else {
-            this.Schema.schema = '#333333'
+            this.Schema.schema = '#000';
+            this.Schema.subSchema = '#fff';
+            this.Schema.text = 'fff';
             this.themeIcon = route7;
         }
 
         return (
-            <nav className='navbar-JP' style={{ background: this.Schema.schema }}>
-                <div id='navbar-JP01'>
+            <nav className='navbar-JP'>
+                <div id='navbar-JP01' style={{
+                    background: this.Schema.schema,
+                    border: `5px solid ${this.Schema.subSchema}`
+                }}>
                     <div className='navbar-01'>
-                        <button width={50} height={50} >
-                            <img width={50} height={50} className='lenguaje' src={this.logoIcon} alt='lenguages' />
-                        </button>
-                    </div>
-                    <div className='navbar-02'>
-                        <ul id='navbar-02-1'>
-                            <li>
-                                <a href='#skills'><img width={50} height={50} src={route5} alt='Skills-icon' id='skills' /></a>
-                            </li>
-                            <li>
-                                <a href='#works'><img width={50} height={50} src={route2} alt='Proyect-icon' id='proyects' /></a>
-                            </li>
-                            <li>
-                                <a href='#home'><img width={50} height={50} src={route1} alt='Home-icon' id='home' /></a>
-                            </li>
-                            <li>
-                                <a href='#github'><img width={50} height={50} src={route3} alt='Github-icon' id='github' /></a>
-                            </li>
-                            <li>
-                                <a href='#mail-contact'><img width={50} height={50} src={route4} alt='Mail-icon' id='mail' /></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className='navbar-03' >
-                        <button width={50} height={50} onClick={() => {
+                        <button style={{ background: this.Schema.schema }} className='Btn-NB' width={40} height={40} onClick={() => {
                             this.ColorTheme()
                             this.themebody()
                             this.props.fun(this.state.backgroundT)
                         }}>
-                            <img className='themes' width={50} height={50} src={this.themeIcon} alt='dark/light-mode' />
+                            <img className='themes' width={40} height={40} src={this.themeIcon} alt='dark/light-mode' />
                         </button>
                     </div>
-                </div>
-                <div id='navbar-JP02'>
-                    <div className='navbar-05'>
-                        <ul id='navbar-04.1'>
-                            <li className='navbarText-04.1'>habilidades</li>
-                            <li className='navbarText-04.1'>Proyectos</li>
-                            <li className='navbarText-04.1'>Inicio</li>
-                            <li className='navbarText-04.1'>Github</li>
-                            <li className='navbarText-04.1'>Contacto</li>
+                    <div className='navbar-03'>
+                        <div id='navbar-03-1'>
+                            <h1 style={{ color: this.Schema.subSchema }} className='navbarText-03-1'>{this.state.menuText}</h1>
+                        </div>
+                    </div>
+                    <div className='navbar-02'>
+                        <ul id='navbar-02-2'>
+                            <li>
+                                <a onClick={() => {
+                                    this.selectMenu('Inicio')
+                                }}
+                                    href='#home'><img width={40} height={40} src={route1} alt='Home-icon' id='home' /></a>
+                            </li>
+                            <li>
+                                <a onClick={() => {
+                                    this.selectMenu('Habilidades')
+                                }}
+                                    href='#skills'><img width={40} height={40} src={route5} alt='Skills-icon' id='skills' /></a>
+                            </li>
+                            <li>
+                                <a onClick={() => {
+                                    this.selectMenu('Proyectos')
+                                }}
+                                    href='#works'><img width={40} height={40} src={route2} alt='Proyect-icon' id='proyects' /></a>
+                            </li>
+                            <li>
+                                <a onClick={() => {
+                                    this.selectMenu('Github')
+                                }}
+                                    href='#github'><img width={40} height={40} src={route3} alt='Github-icon' id='github' /></a>
+                            </li>
+                            <li>
+                                <a onClick={() => {
+                                    this.selectMenu('Contacto')
+                                }}
+                                    href='#mail-contact'><img width={40} height={40} src={route4} alt='Mail-icon' id='mail' /></a>
+                            </li>
                         </ul>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Body from './Body';
+import Navbar from './components/nav-bar/Navbar.js';
 import './App.css';
 
 class App extends Component {
@@ -7,35 +7,40 @@ class App extends Component {
   state = {
 
     color: '#fff',
-    lenguage: true
 
   }
 
   themeAouth = (x) => {
 
     if (x === false) {
-      console.log(x)
-      this.setState({ color: '#000' })
+      console.log(this.state.color)
+      this.setState({ color: '#565656' })
     } else {
-      console.log(x)
+      console.log(this.state.color)
       this.setState({ color: '#fff' })
     }
 
   }
 
-  lenguageAouth = () => {
-
-
-
-  }
-
   render() {
+
+    console.log('render')
 
     return (
 
-      <div className="App">
+      <div className="App" style={{ background: this.state.color }}>
 
-        <Body color={this.state.color} f={this.themeAouth} />
+        <div className='Navbar'>
+          <Navbar fun={this.themeAouth} />
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <h1> Hello World</h1>
 
       </div>
 

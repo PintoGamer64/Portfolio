@@ -1,46 +1,59 @@
-#navbar-JP01{
-
-    display: grid;
-    grid-template-areas: "navbar-01 navbar-02 navbar-03";
-    width: 100%;
-
-}
-
 .navbar-JP{
-    margin: 0;
+    margin: 15px;
     width: 100%;
-    height: 10%;
+    height: 5%;
     position: relative;
-
 }
+
+.Btn-NB{
+    border: none;
+    transition: all 0.6s;
+}
+
+#navbar-JP01{
+    display: grid;
+    position: relative;
+    grid-template-areas: "navbar-01 navbar-01 navbar-03 navbar-03 navbar-02 ";
+    transition: all 0.6s;
+}
+
 .navbar-01{
     grid-area: navbar-01;
 }
 
 .navbar-02{
-    display: flex;
-    align-items: center;
-    width: 100%;
     grid-area: navbar-02;
 }
-#navbar-02-1{
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-#navbar-02-1 li{
-    margin: 10px;
-}
-
 .navbar-03{
     grid-area: navbar-03;
 }
-
-.navbar-01, .navbar-02, .navbar-03{
-    margin: auto;
+#navbar-03-1{
+    text-align: center;
+    width: 18ch;
+    z-index: 1;
+    height: 50%;
+}
+#navbar-02-2{
+    right: 20px;
+    margin: 0;
+    list-style: none;
     display: flex;
     align-items: center;
-    width: 33%;
-    height: 12%;
+}
+#navbar-02-2 li{
+    margin: 10px;
+}
+
+.navbar-01, .navbar-02, .navbar-03{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+
+/*
+-------------Elementos especificos------------------
+*/
+
+img{
+    transition: all 0.6s;
 }
