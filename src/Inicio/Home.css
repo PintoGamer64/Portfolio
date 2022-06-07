@@ -1,0 +1,59 @@
+.Home-JP01 {
+    width: 100%;
+    height: 632.5px;
+}
+
+.Home-JP01-b {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -132px;
+}
+
+.Home-JP01-b-a {
+    display: flex;
+    justify-content: center;
+    width: 265px;
+    height: 80px;
+    color: #000;
+    border: 5px solid #000;
+    background: #fff;
+    margin: 0 auto;
+}
+
+.Home-JP01-b-b {
+    position: relative;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 265px;
+    height: 265px;
+}
+
+.Home-JP01-b-c {
+    display: flex;
+    justify-content: center;
+    width: 265px;
+    height: 80px;
+    border: 5px solid #000;
+    color: #000;
+    background: #fff;
+    margin: 0 auto;
+}
+
+#profile-img {
+    width: 240px;
+    height: 240px;
+    border: 5px solid #000;
+    border-radius: 50%;
+}
+
+#profile-back {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), center center url('https://concepto.de/wp-content/uploads/2014/08/programacion-2-e1551291144973.jpg');
+    background-size: cover;
+    border-bottom: 2px solid #000;
+    width: 100%;
+    height: 500px;
+}

@@ -10,7 +10,8 @@
     transition: all 0.6s;
     margin: 0%;
     width: 100%;
-    position: relative;
+    z-index: 2;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
