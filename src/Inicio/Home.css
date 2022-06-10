@@ -1,3 +1,7 @@
+.Home-JP {
+    height: 632.5px;
+}
+
 .Home-JP01 {
     width: 100%;
     height: 632.5px;
@@ -9,6 +13,7 @@
     justify-content: center;
     align-items: center;
     top: -132px;
+    transition: all 0.5s ease;
 }
 
 .Home-JP01-b-a {
@@ -20,6 +25,7 @@
     border: 5px solid #000;
     background: #fff;
     margin: 0 auto;
+    transition: all 0.5s ease;
 }
 
 .Home-JP01-b-b {
@@ -30,6 +36,7 @@
     justify-content: center;
     width: 265px;
     height: 265px;
+    cursor: pointer;
 }
 
 .Home-JP01-b-c {
@@ -41,6 +48,7 @@
     color: #000;
     background: #fff;
     margin: 0 auto;
+    transition: all 0.5s ease;
 }
 
 #profile-img {
@@ -56,4 +64,57 @@
     border-bottom: 2px solid #000;
     width: 100%;
     height: 500px;
+}
+
+
+/*-------------SET RESPONSIVE DESING----------------*/
+@media screen and (max-width: 740px) {
+
+    #navbar-JP01 {
+        display: grid;
+        position: relative;
+        grid-template-areas: "navbar-01 navbar-01 navbar-03 navbar-02 navbar-02";
+        transition: all 0.6s;
+    }
+
+    .Home-JP {
+        height: 632.5px;
+    }
+
+    .Home-JP01 {
+        width: 100%;
+        height: 632.5px;
+    }
+
+    .Home-JP01-b {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: -132px;
+        transition: all 0.5s ease;
+    }
+
+    .Home-JP01-b-a,
+    .Home-JP01-b-c {
+        margin: 5px auto;
+        transition: all 0.1s ease;
+    }
+
+    .navbar-02 {
+        display: none;
+    }
+
+    .Btn-NB {
+        border: none;
+    }
+
+    .responsDesing {
+        grid-area: navbar-02;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 }

@@ -1,7 +1,32 @@
-body, #root{
+/*------------------ Barra de navegacion -----------------*/
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: #ff0000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+
+    0% , 100% {
+        filter: hue-rotate(0deg);
+    }
+
+    50% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+body,
+#root {
 
     font-family: 'Kdam Thmor Pro', sans-serif;
     margin: 0;
     position: relative;
+    transition: all 0.6s;
 
 }
