@@ -19,6 +19,13 @@ function App() {
 
   }
 
+  function theme(params) {
+    if (params === true) {
+      return darkMode;
+    }
+      
+    }
+
   return (
 
     <div className="App" style={{ background: darkMode }}>
@@ -27,7 +34,7 @@ function App() {
         <Navbar fun={NavbarJSX} />
       </div>
       <div className="home">
-        <Home />
+        <Home theme={theme} />
       </div>
       <br />
       <br />
