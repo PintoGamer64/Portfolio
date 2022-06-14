@@ -19,7 +19,7 @@ function Home(props) {
         console.log('click');
 
         if (deploy === 0) {
-            setDeploy(0.3);
+            setDeploy(0.4);
         } else {
             setDeploy(0);
         }
@@ -32,14 +32,8 @@ function Home(props) {
 
         <div id='Home-JP'>
             <div className='Home-JP01'>
-                <div id='profile-back'>
-                    <img style={{ opacity: deploy }} src="https://spotify-github-profile.vercel.app/api/view?uid=uwjnzqtalkghfb2gd7ueltxzb&cover_image=true&theme=novatorem&bar_color=ff0000&bar_color_cover=false" alt="spotify-Joan Cardozo" id='img-back' />
-                </div>
                 <div className='Home-JP01-a Spotify-activity'>
-
-                </div>
-                <div className='Home-JP01-a'>
-
+                    <img style={{ opacity: deploy }} src="https://spotify-github-profile.vercel.app/api/view?uid=uwjnzqtalkghfb2gd7ueltxzb&cover_image=true&theme=novatorem&bar_color=ff0000&bar_color_cover=false" alt="spotify-Joan Cardozo" id='imgback' />
                 </div>
                 <div className="Home-JP01-b">
                     <div className='Home-JP01-b-a'>
@@ -52,12 +46,9 @@ function Home(props) {
                         <h1>Joan Cardozo</h1>
                     </div>
                 </div>
-                <div className="Home-JP01-c">
-
-                </div>
             </div >
             <div className='Home-JP02'>
-
+                <h1>Hello World</h1>
             </div>
         </div >
 
