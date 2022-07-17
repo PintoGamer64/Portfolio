@@ -1,0 +1,33 @@
+.Habilities {
+    margin: 0 30px;
+}
+
+.Elements-Technologies, .Habilities {
+    display: flex;
+    flex-direction: row;
+}
+
+.Elements-Technologies {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.Elements-Technologies, .techs {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.techs {
+    margin: 0 5px;
+}
+
+.Techs-Data {
+    width: 20%;
+}
+
+.Techs-Data .child{
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+}

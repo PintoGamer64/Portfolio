@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from './components/nav-bar/Navbar.jsx';
 import Home from './Inicio/Home.jsx';
 import './App.css';
+import Body from './Inicio/Components/Body/Body.jsx';
 
 function App() {
 
@@ -36,7 +37,9 @@ function App() {
       <div className="home">
         <Home theme={theme} />
       </div>
-
+      <div>
+        <Body />
+      </div>
     </div>
 
   );

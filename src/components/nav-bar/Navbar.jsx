@@ -20,12 +20,8 @@ import route9 from './material/Menu_Dark.png';
 //Component
 function Navbar(props) {
 
-    console.log(props);
-
     const [darkMode, setDarkMode] = useState(false);
     const [menu, setMenu] = useState('Inicio');
-
-    const [deploy, setDeploy] = useState('none');
 
     function fun () { console.log('menu'); }
 
@@ -36,8 +32,6 @@ function Navbar(props) {
         text: '000',
     }
 
-    console.log('render - navbar');
-
     if (darkMode === false) {
         Schema.schema = '#fff';
         Schema.text = '#000';
@@ -46,8 +40,8 @@ function Navbar(props) {
         menuIcon = route8;
     } else {
         Schema.schema = '#000';
+        Schema.text = '#fff';
         Schema.subSchema = '#fff';
-        Schema.text = 'fff';
         themeIcon = route7;
         menuIcon = route9;
     }
@@ -56,7 +50,7 @@ function Navbar(props) {
         <nav className='navbar-JP'>
             <div id='navbar-JP01' style={{
                 background: Schema.schema,
-                border: `5px solid ${Schema.subSchema}`
+                outline: `3.5px solid ${Schema.subSchema}`
             }}>
                 <div className='navbar-01'>
                     <button style={{ background: Schema.schema }} className='Btn-NB' width={40} height={40} onClick={() => {
@@ -74,7 +68,6 @@ function Navbar(props) {
                 <div className="responsDesing">
                     <button style={{ background: Schema.schema }} onClick={() => {
                         fun();
-                        setDeploy('block');
                     }} className='Btn-NB'><img src={menuIcon} width={40} height={40} alt="Menu-Icon" /></button>
                 </div>
                 <div className='navbar-02'>

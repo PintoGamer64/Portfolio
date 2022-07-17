@@ -7,7 +7,7 @@
 
 .Btn-NB{
     border: none;
-    transition: all 0.6s;
+    transition: all 0.2s;
     cursor: pointer;
 }
 
@@ -15,7 +15,7 @@
     display: grid;
     position: relative;
     grid-template-areas: "navbar-01 navbar-01 navbar-03 navbar-03 navbar-02";
-    transition: all 0.6s;
+    transition: all 0.2s;
 }
 
 .navbar-01{
@@ -40,6 +40,11 @@
     text-align: center;
     grid-area: navbar-03;
 }
+
+.navbar-03 h1{
+    transition: all 0.2s;
+}
+
 #navbar-03-1{
     text-align: center;
     width: 18ch;
@@ -62,7 +67,7 @@
 */
 
 img{
-    transition: all 0.6s;
+    transition: all 0.2s;
 }
 
 .responsDesing {
